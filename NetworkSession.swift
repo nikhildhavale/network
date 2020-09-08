@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Mixpanel
 
 enum Result<Success,Failure:Error>
 {
@@ -80,7 +79,6 @@ struct NetworkSession
                             properties["response"] = NEError.noData.rawValue
 
                         }
-                          Mixpanel.mainInstance().track(event: "API", properties: properties)
                     }
                   
                 }.resume()
